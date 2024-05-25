@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import viteLogo from '/vite.svg'
 import Banner from './components/Banner';
+import QuestionForm from './components/QuestionForm';
 import Cart from './components/Cart';
 import ShoppingList from './components/ShoppingList';
 import logo from './assets/logo.png'
+import Footer from './components/Footer';
 
 function Description(){
    const text =  "Achetez sur ce site  vos plantes revez !"
@@ -24,6 +26,9 @@ function App() {
 <Cart />
 <Description />
 <ShoppingList />
+<QuestionForm/> <br /><br /><br /><br />
+<Footer />
+
   </div>   
     
   )

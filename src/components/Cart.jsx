@@ -10,20 +10,12 @@ function Cart(){
          <h3> Mes achats - Mon panier:</h3>      
              <ul >
           <li>
-          "monstera", {price1} €
+          "monstera : " {price1} €
 
           </li>
-          <li>
-          "lierre" , {price2} €
-
-          </li>
-          <li>
-          "bouquet de fleurs", {price3} €
-
-          </li>
-          
+         
          </ul>
-         <p>Total:{price1+price2+price3} €</p> 
+         <p>Total:{price1} €</p> 
          
          </div>
         );
