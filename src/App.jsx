@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import viteLogo from '/vite.svg'
 import Banner from './components/Banner';
 import QuestionForm from './components/QuestionForm';
@@ -16,16 +16,22 @@ function Description(){
 function App() {
   
   const title= "La maison jungle"
-
+  //const [cart, setCart] = useState([]) //{name, price}
+  const savedCart = localStorage.getItem('cart')
+	const [cart, setCart] = useState(savedCart ? JSON.parse(savedCart) : [])
+	useEffect(() => {
+		localStorage.setItem('cart', JSON.stringify(cart))
+	}, [cart])
+  
   return (
     <div><h6>Hello Avit</h6> 
 <Banner >
       <img src={logo} alt='here a logo' className='lmj-logo'/>
         <h1 className='lmj-title'>{title.toUpperCase()}</h1>
   </Banner>   
-<Cart />
+<Cart cart={cart} setCart={setCart} />
 <Description />
-<ShoppingList />
+<ShoppingList cart={cart} setCart={setCart} />
 <QuestionForm/> <br /><br /><br /><br />
 <Footer />
 

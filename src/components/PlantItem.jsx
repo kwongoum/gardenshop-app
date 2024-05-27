@@ -1,7 +1,7 @@
 import CareScale from './CareScale'
 import '../styles/PlantItem.css'
 
-function PlantItem({ id, cover, name, water, light }) {
+function PlantItem({ id, cover, name, water, light, price}) {
 	
 	 function handleClickItem(name){
 		 //alert('item:',e)
